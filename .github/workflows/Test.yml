@@ -9,11 +9,15 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+env:
+  DAY_OF_WEEK: Monday
 
 jobs:
   my-job:
     name: My Job
     runs-on: ubuntu-latest
+    env:
+      Greeting: Hello
     steps:
       - name: Print a greeting
         env:
@@ -22,4 +26,4 @@ jobs:
           MIDDLE_NAME: Agile
           LAST_NAME: Accelerate
         run: |
-          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME.
+          echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME $DAY_OF_WEEK $GREETING

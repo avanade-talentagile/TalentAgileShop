@@ -32,6 +32,7 @@ jobs:
           LAST_NAME: Accelerate
         run: |
           echo $MY_VAR $FIRST_NAME $MIDDLE_NAME $LAST_NAME $DAY_OF_WEEK $GREETING
+          echo "::debug::Set the Octocat variable"
   greeting_job:
     runs-on: ubuntu-latest
     env:

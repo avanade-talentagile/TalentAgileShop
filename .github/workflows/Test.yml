@@ -10,7 +10,7 @@ on:
   pull_request:
     branches: [ "master" ]
 env:
-  DAY_OF_WEEK: Monday
+  DAY_OF_WEEK: Tuesday
 
 jobs:
   my-job:

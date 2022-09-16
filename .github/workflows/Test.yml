@@ -14,10 +14,10 @@ env:
 
 jobs:
   my-job:
-    name: My Job
-     strategy:
-      matrix:
-        os: [ubuntu-latest, windows-latest]
+    strategy:
+        matrix:
+          os: [ubuntu-latest, windows-latest]
+    runs-on: ${{matrix.os}}
     env:
       Greeting: Hello
     steps:

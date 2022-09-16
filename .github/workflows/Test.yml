@@ -15,7 +15,9 @@ env:
 jobs:
   my-job:
     name: My Job
-    runs-on: ubuntu-latest
+     strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest]
     env:
       Greeting: Hello
     steps:

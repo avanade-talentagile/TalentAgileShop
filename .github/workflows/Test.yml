@@ -9,6 +9,9 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  issues:
+    types:
+      - opened
 env:
   DAY_OF_WEEK: Tuesday
 

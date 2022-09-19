@@ -14,6 +14,7 @@ on:
       - opened
 env:
   DAY_OF_WEEK: Tuesday
+  CHECKMARX_SECRET: ${{secrets.CHECKMARX_SECRET}}
 
 jobs:
   bash-example:
@@ -24,6 +25,7 @@ jobs:
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
+            echo: "$CHECKMARX_SECRET"
   my-job:
     strategy:
         matrix:

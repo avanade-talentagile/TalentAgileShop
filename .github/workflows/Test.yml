@@ -25,7 +25,8 @@ jobs:
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
-            echo: "$CHECKMARX_SECRET"
+            echo: ${{secrets.CHECKMARX_SECRET}}
+            echo: ${{ secrets.CHECKMARX_SECRET }}
   my-job:
     strategy:
         matrix:

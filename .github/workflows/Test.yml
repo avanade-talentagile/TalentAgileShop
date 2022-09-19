@@ -14,7 +14,7 @@ on:
       - opened
 env:
   DAY_OF_WEEK: Tuesday
-  CHECKMARX_SECRET: ${{secrets.CHECKMARX_SECRET}}
+  CHECKMARX_SECRET: ${{secrets.GIT_PPU}}
 
 jobs:
   bash-example:
@@ -25,8 +25,8 @@ jobs:
             echo "::group::My title"
             echo "Inside group"
             echo "::endgroup::"
-            echo: ${{secrets.CHECKMARX_SECRET}}
-            echo: ${{ secrets.CHECKMARX_SECRET }}
+            echo: ${{secrets.GIT_PPU}}
+            echo: ${{ secrets.GIT_PPU }}
   my-job:
     strategy:
         matrix:
